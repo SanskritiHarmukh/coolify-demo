@@ -61,8 +61,6 @@ app.get('/', (req, res) => {
         <div class="container">
             <div class="header">
                 <h1>🚀 Coolify Demo</h1>
-                <p>Deployed via Coolify • Auto SSL • CI/CD Pipeline</p>
-                <p><strong>Environment:</strong> ${process.env.NODE_ENV || 'development'}</p>
             </div>
 
             <div class="stats">
@@ -75,17 +73,13 @@ app.get('/', (req, res) => {
                     <div class="stat-label">Messages</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">${demoData.deployments}</div>
-                    <div class="stat-label">Deployments</div>
-                </div>
-                <div class="stat-card">
                     <div class="stat-number">${new Date().getHours()}:${new Date().getMinutes().toString().padStart(2, '0')}</div>
                     <div class="stat-label">Current Time</div>
                 </div>
             </div>
 
             <div class="demo-section">
-                <h2>📝 Live Demo Features</h2>
+                <h2>📝 Live Chat</h2>
                 <form class="message-form" action="/api/message" method="POST">
                     <input type="text" name="message" placeholder="Enter a message..." required>
                     <button type="submit">Send Message</button>
